@@ -7,7 +7,6 @@
 	<buildSpec>
 		<buildCommand>
 			<name>com.windriver.ide.core.wrbuilder</name>
-			<triggers>clean,full,incremental,</triggers>
 			<arguments>
 			</arguments>
 		</buildCommand>
