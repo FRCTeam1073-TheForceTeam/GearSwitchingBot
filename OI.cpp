@@ -1,6 +1,13 @@
 #include "OI.h"
 #include "SmartDashboard/SmartDashboard.h"
-#include "Commands/AutonomousCommand.h"
+
+#define TRIGGER 1
+
 OI::OI() {
-	SmartDashboard::PutData("Autonomous Command", new AutonomousCommand());
+	leftStick = new SmartJoystick(1);
+	rightStick = new SmartJoystick(2);
+	
+	leftSwitch = new JoystickButton(leftStick, TRIGGER);
+	rightSwitch = new JoystickButton(rightStick, TRIGGER);
+	
 }
