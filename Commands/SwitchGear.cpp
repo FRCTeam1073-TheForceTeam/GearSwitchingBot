@@ -5,10 +5,15 @@ SwitchGear::SwitchGear(bool low) {
 }
 
 void SwitchGear::Initialize() {
-	if (low)
-		RobotMap::gearSwitcher->SwitchLow();
-	else 
+	printf("Switching to... ");
+	if (low) {
+		RobotMap::gearSwitcher->SwitchLow(); 
+		puts("low gear");
+	}
+	else {
 		RobotMap::gearSwitcher->SwitchHigh();
+		puts("high gear");
+	}
 }
 
 void SwitchGear::Execute() {}

@@ -8,8 +8,11 @@ public:
 	void SwitchLow(); 
 	void SwitchOff();
 	void SwitchHigh();
+	bool IsLowGear();
 private:
 	DoubleSolenoid* solenoid;
+	bool lowGear;
+	void Set();
 };
 
 #endif
