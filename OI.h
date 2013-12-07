@@ -2,7 +2,7 @@
 #define OI_H
 #include "WPILib.h"
 #include "WPILibExtensions/WPILibExtensions.h"
-#include <vector>
+#include "Commands/SwitchGear.h"
 
 class OI {
 private:
@@ -20,8 +20,8 @@ private:
 	JoystickButton* normalMode;
 	JoystickButton* turboMode;
 	JoystickButton* cubicMode;
-	vector<SmartJoystick*>* joyListPtr;
-	
+	JoystickButton* lowGear;
+	JoystickButton* highGear;
 	
 };
 #endif

@@ -2,7 +2,8 @@
 #include "LiveWindow/LiveWindow.h"
 SmartCANJaguarSeries* RobotMap::leftDrive = NULL;
 SmartCANJaguarSeries* RobotMap::rightDrive = NULL;
-
+DoubleSolenoid* RobotMap::doubleSolenoid = NULL;
+GearSwitcher* RobotMap::gearSwitcher = NULL;
 DriveTrain* RobotMap::driveTrain = NULL;
 
 void RobotMap::init() {
@@ -18,6 +19,8 @@ void RobotMap::init() {
 	rightDrive= new SmartCANJaguarSeries();
 	rightDrive->Add(rightFront);
 	rightDrive->Add(rightRear);
+	
+	doubleSolenoid = new DoubleSolenoid(SOLENOID_PORT_ONE, SOLENOID_PORT_TWO);
 	
 	driveTrain = new DriveTrain();
 	
