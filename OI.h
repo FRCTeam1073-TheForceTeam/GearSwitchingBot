@@ -14,9 +14,6 @@ public:
 
 
 private:
-
-	JoystickButton* leftSwitch;
-	JoystickButton* rightSwitch;
 	JoystickButton* normalMode;
 	JoystickButton* turboMode;
 	JoystickButton* cubicMode;
