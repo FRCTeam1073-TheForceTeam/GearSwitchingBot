@@ -6,6 +6,7 @@
 #define DRIVE_JAG_RIGHT_FRONT 3
 #define DRIVE_JAG_RIGHT_REAR 4
 
+// by default we're assuming that the Solenoid Breakout Board is in port 1
 
 #define SOLENOID_PORT_ONE 1
 #define SOLENOID_PORT_TWO 2
