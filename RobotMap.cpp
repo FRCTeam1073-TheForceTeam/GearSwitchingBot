@@ -13,12 +13,10 @@ void RobotMap::init() {
 	SmartCANJaguar* rightRear = new SmartCANJaguar(DRIVE_JAG_RIGHT_REAR);
 	
 	leftDrive = new SmartCANJaguarSeries();
-	leftDrive->Add(leftFront);
-	leftDrive->Add(leftRear);
+	leftDrive->Add(2, leftFront, leftRear);
 	
 	rightDrive= new SmartCANJaguarSeries();
-	rightDrive->Add(rightFront);
-	rightDrive->Add(rightRear);
+	rightDrive->Add(2, rightFront, rightRear);
 	
 	doubleSolenoid = new DoubleSolenoid(SOLENOID_PORT_ONE, SOLENOID_PORT_TWO);
 	
