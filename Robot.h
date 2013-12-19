@@ -14,12 +14,11 @@ public:
 	virtual void AutonomousPeriodic();
 	virtual void TeleopInit();
 	virtual void TeleopPeriodic();
-	virtual void TestPerbpiodic();
-	virtual void DisabledInit();
 	virtual void TestPeriodic();
+	virtual void DisabledInit();
+	virtual void DisabledPeriodic();
 	static OI* oi;
 	
 private:
-	
 };
 #endif

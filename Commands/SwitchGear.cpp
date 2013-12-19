@@ -1,19 +1,16 @@
 #include "SwitchGear.h"
-SwitchGear::SwitchGear(bool low) {
+SwitchGear::SwitchGear() {
+	for (int i = 0; i < 20; i++) puts ("contructed switch gear");
 	Requires(RobotMap::gearSwitcher);
-	this->low = low;
 }
 
 void SwitchGear::Initialize() {
-	printf("Switching to... ");
-	if (low) {
-		RobotMap::gearSwitcher->SwitchLow(); 
-		puts("low gear");
-	}
-	else {
-		RobotMap::gearSwitcher->SwitchHigh();
-		puts("high gear");
-	}
+	for (int i = 0; i < 34; i++) puts("init switch gear");	
+	RobotMap::gearSwitcher->Switch();
+	if (RobotMap::gearSwitcher->IsLowGear())
+		puts("You're now in low gear!");
+	else 
+		puts("You're now in high gear");
 }
 
 void SwitchGear::Execute() {}

@@ -1,6 +1,6 @@
-
 #include "Robot.h"
 OI* Robot::oi = 0;
+Robot::Robot() {}
 void Robot::RobotInit() {
 	RobotMap::init();
 	oi = new OI();
@@ -18,8 +18,15 @@ void Robot::TeleopInit() {
 }
 	
 void Robot::TeleopPeriodic() {
+	Scheduler::GetInstance()->Run();
 }
 void Robot::TestPeriodic() {
 	lw->Run();
+}
+void Robot::DisabledInit() {
+	
+}
+void Robot::DisabledPeriodic() {
+	
 }
 START_ROBOT_CLASS(Robot);

@@ -5,13 +5,12 @@
 #include "../RobotMap.h"
 class SwitchGear : public Command {
 public:
-	SwitchGear(bool low);
+	SwitchGear();
 	void Initialize();
 	void Execute();
 	bool IsFinished();
 	void End();
 	void Interrupted();
 private:
-	bool low;
 };
 #endif

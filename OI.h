@@ -17,8 +17,7 @@ private:
 	JoystickButton* normalMode;
 	JoystickButton* turboMode;
 	JoystickButton* cubicMode;
-	JoystickButton* lowGear;
-	JoystickButton* highGear;
+	JoystickButton* gearSwitchButton;
 	
 };
 #endif

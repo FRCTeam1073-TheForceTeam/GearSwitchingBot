@@ -10,33 +10,12 @@ GearSwitcher::GearSwitcher() : Subsystem("GearSwitcher") {
 	lowGear = true;
 }
 
-void GearSwitcher::SwitchLow() {
-	solenoid->Set(low);
-}
-
-// would we ever use this?s
-void GearSwitcher::SwitchOff() {
-	if(lowGear) {
-		puts("you're already in the low gear!");
-		return;
-	}
-	lowGear = true;
-	Set();
-}
-
-void GearSwitcher::SwitchHigh() {
-	if (!lowGear) {
-		puts("you're already in the high gear!");
-		return;
-	}
-	lowGear = false;
-	Set();
-}
- 
-void GearSwitcher::Set() {
-	if(lowGear) 
+void GearSwitcher::Switch() {
+	if (lowGear)
 		solenoid->Set(low);
-	else solenoid->Set(high);
+	else
+		solenoid->Set(high);
+	lowGear = !lowGear;
 }
 
 bool GearSwitcher::IsLowGear() {

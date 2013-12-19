@@ -5,14 +5,11 @@
 class GearSwitcher : public Subsystem {
 public:
 	GearSwitcher();
-	void SwitchLow(); 
-	void SwitchOff();
-	void SwitchHigh();
+	void Switch();
 	bool IsLowGear();
 private:
 	DoubleSolenoid* solenoid;
 	bool lowGear;
-	void Set();
 };
 
 #endif

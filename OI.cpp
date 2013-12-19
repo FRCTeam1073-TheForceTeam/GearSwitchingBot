@@ -5,9 +5,13 @@
 
 // joystick drive modes, change these later.
 
+
+// switch modes with these
 #define NORMAL 2
 #define TURBO 3
 #define CUBIC 4
+
+#define GEARSWTICHBUTTON 7 // we use this on the left stick
 
 OI::OI() {
 	leftStick = new SmartJoystick(1);
@@ -25,9 +29,6 @@ OI::OI() {
 	cubicMode = new JoystickButton(leftStick, CUBIC);
 	cubicMode->WhenPressed(new ChangeJoystickModeCommand(SmartJoystick::cubic));
 	
-	lowGear = new JoystickButton(leftStick, TRIGGER);
-	lowGear->WhenPressed(new SwitchGear(true));
-	
-	highGear = new JoystickButton(rightStick, TRIGGER);
-	highGear->WhenPressed(new SwitchGear(false));
+	gearSwitchButton = new JoystickButton(leftStick, 7);
+	gearSwitchButton->WhenPressed(new SwitchGear());
 }
