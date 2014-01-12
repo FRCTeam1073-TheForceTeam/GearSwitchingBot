@@ -244,12 +244,12 @@
         </mapAttribute>
     </attributes>
     <buildtargets>
-        <buildtarget buildtool="Linker" name="CommandBasedRobotTemplate" passed="false" targetname="CommandBasedRobotTemplate">
+        <buildtarget buildtool="Linker" name="GearSwitchingRobot" passed="false" targetname="GearSwitchingRobot">
             <contents>
                 <folder name="/GearSwitchingBot" recursive="true"/>
             </contents>
         </buildtarget>
-        <buildtarget buildtool="Partial Image Linker" name="CommandBassedRobotTemplate_partialImage" passed="true" targetname="CommandBassedRobotTemplate_partialImage">
+        <buildtarget buildtool="Partial Image Linker" name="GearSwitchingRobot_partialImage" passed="true" targetname="GearSwitchingRobot_partialImage">
             <contents>
                 <folder name="/GearSwitchingBot" recursive="true"/>
             </contents>
